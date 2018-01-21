@@ -2,10 +2,10 @@
   "name": "stoppable",
   "version": "1.0.3",
   "engines": {
-    "node": ">=6"
+    "node": ">=0.10"
   },
   "keywords": [],
-  "repository": "hunterloftis/stoppable",
+  "repository": "myndzi/stoppable",
   "scripts": {
     "lint": "standard --fix 'lib/**/*.js'",
     "secure": "nsp check",
