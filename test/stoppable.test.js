@@ -87,7 +87,7 @@ describe('http.Server', () => {
         assert.equal(closed, 1)
       })
       it('empties all sockets once closed', () => {
-        assert.equal(server._pendingSockets.size, 0)
+        assert.equal(server._pendingSockets, 0)
       })
       it('registers the "close" callback', (done) => {
         const server = stoppable(http.createServer((req, res) => res.end('hello')))
@@ -116,7 +116,7 @@ describe('http.Server', () => {
         assert.closeTo(Date.now() - start, 500, 50)
       })
       it('empties all sockets', () => {
-        assert.equal(server._pendingSockets.size, 0)
+        assert.equal(server._pendingSockets, 0)
       })
     })
     describe('with requests in-flight', () => {
